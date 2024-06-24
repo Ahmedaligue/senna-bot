@@ -1,21 +1,127 @@
-import fetch from 'node-fetch'
+import fetch from 'node-fetch';
+export async function before(m, { conn }) {
+   let pp = await this.profilePictureUrl(m.sender, 'image').catch(_ => 'https://i.ibb.co/1ZxrXKJ/avatar-contact.jpg');
 
-let handler = m => m
-handler.all = async function (m) {
-	
-	let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? this.user.jid : m.sender
-	let pp = await this.profilePictureUrl(who, 'image').catch(_ => 'https://telegra.ph/file/c6e93e154336db7585c98.jpg')
-	
-	//reply link wa
-   global.rpl = { contextInfo: { externalAdReply: { mediaUrl: dygp, mediaType: 'فيديو', description: 'دعم الجروب', title: packname, body: 'دعم الجروب', thumbnailUrl: pp, sourceUrl: dygp }}} 
-	
-	//reply link PayPal
-    global.rpyp = { contextInfo: { externalAdReply: { mediaUrl: dygp, mediaType: 'فيديو', description: 'يتبرع', title: 'يوتيوب', body: 'إبقاء الروبوت يعمل ', thumbnailUrl: pp, sourceUrl: fgyt }}}
-	
-	//reply link yt
-    global.rpyt = { contextInfo: { externalAdReply: { showAdAttribution: true, mediaUrl: fgyt, mediaType: 'الفيديو', description: 'اشتراك : ' + fgyt, title: 'YouTube', body: 'تعلم كيفية إنشاء الروبوتات الخاصة بك', thumbnailUrl: pp, sourceUrl: fgyt }}}
+  let nam = "✨  Mirza bot  ✨"
+  
+  // Respuesta con enlace de WhatsApp
+  global.rpl = {
+    contextInfo: {
+    	isForwarded: true,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: id_canal,
+      serverMessageId: 100,
+      newsletterName: nam,
+    }, 
+      externalAdReply: {
+        mediaUrl: bgp,
+        mediaType: 'VIDEO',
+        description: 'support group',
+        title: packname,
+        body: 'grupo de soporte',
+        thumbnailUrl: pp,
+        sourceUrl: bgp
+      }
+    }
+  };
+  
+  // Respuesta con enlace de Canal de WhatsApp
+  global.rcanal = {
+    contextInfo: {
+    	isForwarded: true,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: id_canal,
+      serverMessageId: 100,
+      newsletterName: nam,
+    }, 
+      externalAdReply: {
+        mediaUrl: fgcanal,
+        mediaType: 'VIDEO',
+        description: 'canal del grupo',
+        title: packname,
+        body: 'Canal de FG98',
+        thumbnailUrl: pp,
+        sourceUrl: fgcanal
+      }
+    }
+  }
+  
+    // Forwarded
+  global.fwc = {
+    contextInfo: {
+    	isForwarded: true,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: id_canal,
+      serverMessageId: 100,
+      newsletterName: nam,
+    }
+    }
+  }
 
-	global.fcon = { key: { fromMe: false, participant: `0@s.whatsapp.net`, remoteJid: 'status@broadcast' }, message: { contactMessage: { displayName: `ZORO-BOT`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:'GURU-BOT'\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
+  // Respuesta con enlace de PayPal
+  global.rpyp = {
+    contextInfo: {
+    	isForwarded: true,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: id_canal,
+      serverMessageId: 100,
+      newsletterName: nam,
+    }, 
+      externalAdReply: {
+        mediaUrl: fgpyp,
+        mediaType: 'VIDEO',
+        description: 'Donate',
+        title: 'PayPal',
+        body: 'ayuda a mantener el bot activo',
+        thumbnailUrl: pp,
+        sourceUrl: fgpyp
+      }
+    }
+  };
 
-} 
-export default handler
+  // Respuesta con enlace de Instagram
+  global.rpig = {
+    contextInfo: {
+    	isForwarded: true,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: id_canal,
+      serverMessageId: 100,
+      newsletterName: nam,
+    }, 
+      externalAdReply: {
+        mediaUrl: fgig,
+        mediaType: 'VIDEO',
+        description: 'Sigueme por Instagram',
+        title: 'Instagram',
+        body: 'sigueme por Instagram',
+        thumbnailUrl: pp,
+        sourceUrl: fgig
+      }
+    }
+  };
+
+  // Respuesta con enlace de YouTube
+  global.rpyt = {
+    contextInfo: {
+    	isForwarded: true,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: id_canal,
+      serverMessageId: 100,
+      newsletterName: nam,
+    }, 
+      externalAdReply: {
+        showAdAttribution: true,
+        mediaUrl: fgyt,
+        mediaType: 'VIDEO',
+        description: 'Suscribete: ' + fgyt,
+        title: 'FG YouTube',
+        body: 'aprende a crear tus propios bots',
+        thumbnailUrl: pp,
+        sourceUrl: fgyt
+      }
+    }
+  }
+  
+  
+  
+}
