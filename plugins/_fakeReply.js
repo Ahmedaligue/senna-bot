@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 export async function before(m, { conn }) {
    let pp = await this.profilePictureUrl(m.sender, 'image').catch(_ => 'https://i.ibb.co/1ZxrXKJ/avatar-contact.jpg');
 
-  let nam = "✨  Mirza bot  ✨"
+  let nam = "✨  𝑴𝒊𝒓𝒛𝒂 𝑩𝒐𝒕  ✨"
   
   // Respuesta con enlace de WhatsApp
   global.rpl = {
@@ -39,7 +39,7 @@ export async function before(m, { conn }) {
         mediaType: 'VIDEO',
         description: 'canal del grupo',
         title: packname,
-        body: 'Canal de FG98',
+        body: 'مرحباً: ${m.pushName}',
         thumbnailUrl: pp,
         sourceUrl: fgcanal
       }
