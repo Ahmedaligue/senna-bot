@@ -8,8 +8,8 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
         const mentionId = m.key.participant || m.key.remoteJid;
         const interactiveMessage = {
             body: { text: `╭╌┄┄『 USER DETAILS 』
-┊ ▢ 𝙽𝚄𝙼𝙱𝙴𝚁 : `${m.pushNumber}`
-┊ ▢ 𝙽𝙰𝙼𝙴 : `${m.pushName}`
+┊ ▢ 𝙽𝚄𝙼𝙱𝙴𝚁 : 
+┊ ▢ 𝙽𝙰𝙼𝙴 : 
 ╯ ┄┬┄┄┄◯
 ╭┄ ┴┄『 BOT DETAILS 』
 ┊ ▢  𝙽𝙰𝙼𝙴 : 𝑴𝒊𝒓𝒛𝒂 𝑩𝒐𝒕
