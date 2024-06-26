@@ -7,10 +7,28 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
         var mirzaimg = await prepareWAMessageMedia({ image: {url: 'https://telegra.ph/file/11d8f4ee53b8dd9fe80c6.jpg'}}, { upload: conn.waUploadToServer })
         const mentionId = m.key.participant || m.key.remoteJid;
         const interactiveMessage = {
-            body: { text: `مرحباً! ${m.pushName}`.trim() },
+            body: { text: `╭╌┄┄『 USER DETAILS 』
+┊ ▢ 𝙽𝚄𝙼𝙱𝙴𝚁 :  94751627940
+┊ ▢ 𝙽𝙰𝙼𝙴 :  𝙷𝙳𝚂 𝙾𝙵𝙲 𝚃𝙼
+╰ ┄┬┄┄┄◯
+╭┄ ┴┄『 BOT DETAILS 』
+┊ ▢  𝙽𝙰𝙼𝙴 : queen elisa
+┊ ▢  𝙽𝚄𝙼𝙱𝙴𝚁 : 94772076642
+┊ ▢  𝙷𝙾𝚂𝚃 𝙾𝙽 : Heroku 
+┊ ▢  𝚆𝙴𝙱 : Chrome
+╰┄┬┄╌╌╌┄◯
+╭┄┴┄┄『 ABOUT SYSTEM 』
+┊ ▢  𝙿𝚁𝙴𝙵𝙸𝚇 : .
+┊ ▢  𝚃𝙸𝙼𝙴 : 10:26:00
+┊ ▢  𝙳𝙰𝚃𝙴 : 6/25/2024
+┊ ▢  𝚁𝙰𝙼 𝚄𝚂𝙰𝙶𝙴 : 80.62MB / 63277MB
+╰┄┄┄┄┄┄┄┄┄◯`.trim() },
             footer: { text: `© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ʜᴀᴍᴢᴀ`.trim() },  
             header: {
-                title: ``,
+                title: `╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸
+                 QUEEN ELISA LIST MENU
+╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸
+`,
                 subtitle: `test`,
                 hasMediaAttachment: true,
                 imageMessage: mirzaimg.imageMessage,
