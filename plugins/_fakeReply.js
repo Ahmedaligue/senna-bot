@@ -39,7 +39,7 @@ export async function before(m, { conn }) {
         mediaType: 'VIDEO',
         description: 'canal del grupo',
         title: packname,
-        body: { text: `مرحباً! ${m.pushName}`.trim() },
+        body: `مرحباً! ${m.pushName}`,
         thumbnailUrl: pp,
         sourceUrl: fgcanal
       }
