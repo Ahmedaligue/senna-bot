@@ -26,7 +26,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
             footer: { text: `© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ʜᴀᴍᴢᴀ`.trim() },  
             header: {
                 title: `╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸
-                 QUEEN ELISA LIST MENU
+                 قائمة الاوامر
 ╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸╸
 `,
                 subtitle: `test`,
